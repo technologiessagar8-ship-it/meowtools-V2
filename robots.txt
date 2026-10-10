@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://technologiessagar8-ship-it.github.io/meowtools/sitemap.xml
