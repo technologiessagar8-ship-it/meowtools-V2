@@ -1,15 +1,15 @@
 (()=>{'use strict';
 const reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>Array.from(r.querySelectorAll(s));
 // Accessible responsive navigation: all category links remain direct menu items on compact screens.
-const header=$('.site-header'),mainNav=$('.main-nav',header||document),categoryNav=$('.category-nav',header||document),menuToggle=$('.mobile-menu-toggle',header||document);
+const header=$('.site-header'),mainNav=$('.main-nav',header||document),menuToggle=$('.mobile-menu-toggle',header||document);
 if(header&&mainNav&&menuToggle){
   if(!mainNav.id)mainNav.id='main-navigation';
-  menuToggle.setAttribute('aria-controls',[mainNav.id,categoryNav?.id].filter(Boolean).join(' '));
+  menuToggle.setAttribute('aria-controls',mainNav.id);
   const mobileNav=()=>window.matchMedia('(max-width: 1300px)').matches;
   const setMenu=(open)=>{header.classList.toggle('nav-open',!!open);menuToggle.setAttribute('aria-expanded',open?'true':'false');menuToggle.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu');menuToggle.innerHTML=open?'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>':'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>';};
   setMenu(false);
   menuToggle.addEventListener('click',()=>setMenu(!header.classList.contains('nav-open')));
-  [mainNav,categoryNav].filter(Boolean).forEach(nav=>nav.addEventListener('click',e=>{if(e.target.closest('a')&&mobileNav())setMenu(false)}));
+  mainNav.addEventListener('click',e=>{if(e.target.closest('a')&&mobileNav())setMenu(false)});
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&header.classList.contains('nav-open')){setMenu(false);menuToggle.focus()}});
   document.addEventListener('click',e=>{if(mobileNav()&&header.classList.contains('nav-open')&&!header.contains(e.target))setMenu(false)});
   window.addEventListener('resize',()=>{if(!mobileNav())setMenu(false)});
