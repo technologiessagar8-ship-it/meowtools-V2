@@ -1,0 +1,9 @@
+MEOWTOOLS NAVIGATION FIX — APPLY THIS BUILD
+
+This package is a real code change from the previous build. On desktop it uses two clear rows:
+Row 1: Home, Most Used, Dashboard, All Tools, About, Contact, Support.
+Row 2: Image Tools, PDF Tools, Calculator Tools, Converter Tools, Text Tools, Developer Tools.
+
+On mobile/tablet, the hamburger opens both navigation groups.
+
+INSTALL: Copy every file and folder IN THIS DIRECTORY into the ROOT of your existing meowtools-V2 repository. Merge folders and replace files when asked. Do not delete the repository and do not touch .git. After copying, GitHub Desktop should show changed files. If it still shows 0 changes, stop: either the wrong local folder was edited or the files were not overwritten.
