@@ -1,0 +1,12 @@
+MEOWTOOLS — ICON SIDEBAR + TOOL PAGE REDESIGN
+
+What changed:
+- Each individual tool page now has a visible icon-based sidebar with related tools and an active item.
+- Added a cinematic neon workspace hero with the local background artwork, animated glow sweep, and floating tool icon.
+- Added a responsive two-column tool input layout, premium input cards, upload cards, synchronized range controls (where configured), and dark date input styling.
+- The top navigation dropdown now says Tools menu and links to the major tool sections plus All Tools.
+- Existing per-tool input definitions and processing JavaScript are retained.
+
+Deploy: copy the contents of this folder to the repository root. Open a tool page (e.g. tools/emi-calculator/) to see the sidebar + hero.
+
+Important: visual styling is shared across tool pages. Native browser date-picker popup appearance varies by OS/browser; HTML date fields can be styled but the native calendar popup cannot be made identical on every browser without replacing it with a custom date-picker widget.

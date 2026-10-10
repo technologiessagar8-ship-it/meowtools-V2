@@ -1,0 +1,29 @@
+MEOWTOOLS — FINAL READABILITY / DASHBOARD REPAIR
+
+Root causes found in the previous ZIP
+1. Five EMI-family pages had a malformed app.js script opening tag. Their form JavaScript never loaded, leaving a blank form panel.
+2. The neon workspace illustration was applied as a fixed body background to every tool page. This made the illustration show behind How to use / FAQ / related content and reduced text readability.
+3. The dashboard advertised PDF to Word and Merge PDF, but both cards linked to the Images to PDF tool. Those misleading cards were replaced with a genuine Explore PDF Tools link.
+
+Repairs included
+- Repaired app.js script tags on EMI, Home Loan EMI, Car Loan EMI, Personal Loan EMI and Education Loan EMI pages.
+- Removed the workspace image from the overall tool-page body background. Kept it only inside the tool hero; content sections now have dark, opaque readable panels.
+- Added structured Loan Details / EMI Results panels on all five loan-calculator pages.
+- Added an EMI result card with monthly EMI, principal, interest, total payment, a principal-vs-interest donut breakdown, and start/final payment dates when supplied.
+- Renamed the button to Calculate EMI on the five EMI-family tools.
+- Kept the existing custom neon calendar, synchronized numeric sliders, upload card styling, shared header, direct category menu, dashboard page and UPI placeholder.
+- Contact page retains technologiessagar8@gmail.com.
+
+Static QA results
+- 127 HTML pages in package.
+- 113 tool pages.
+- 6,364 relative href/src references checked; 0 missing local targets.
+- 0 malformed script tails found after repair.
+- Every tool page references assets/app.js, assets/calendar.js and its window.T configuration.
+- JavaScript syntax checked: app.js, calendar.js and interactions.js.
+- CSS parsed with 0 top-level syntax errors.
+- Dashboard PDF card mislinks corrected.
+
+Limitations
+- Browser-based end-to-end tests could not be reliably executed in this environment. After extracting the ZIP, check the EMI Calculator page locally and try Calculate EMI, its custom calendar and sliders before publishing to GitHub Pages.
+- UPI QR is intentionally a placeholder until the real QR image is provided.

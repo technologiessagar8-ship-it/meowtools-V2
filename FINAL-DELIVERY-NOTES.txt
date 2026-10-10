@@ -1,0 +1,15 @@
+MEOWTOOLS FINAL MENU + DASHBOARD UPDATE
+
+What changed in this build:
+- Removed the generic Categories dropdown from the site-wide top navigation.
+- Added direct icon-led menu links: Image Tools, PDF Tools, Calculator Tools, Converter Tools, Text Tools, Developer Tools.
+- Added a dedicated Dashboard page at dashboard/index.html with category shortcuts and popular tools.
+- Kept All Tools as a separate full directory link.
+- Added icon badges to homepage category headings and refined the neon pink/violet visual theme.
+- Updated the shared navigation across individual tool pages and informational pages.
+- Existing tool URLs and tool-engine scripts were preserved.
+
+Deployment:
+Upload the contents of this folder to the repository root, keeping the folder structure.
+The UPI QR is still a placeholder until a real verified QR image is supplied.
+The package has been checked for local navigation targets and JavaScript syntax where applicable; this is not a full browser test of all tools.
